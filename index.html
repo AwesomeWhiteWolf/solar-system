@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Solar System</title>
+    
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        overflow: hidden;
+      }
+      .container {
+        font-size: 10px;
+        width: 40em;
+        height: 40em;
+        position: relative;
+      }
+      .sun {
+        position: absolute;
+        top: 13.5em;
+        left: 13.5em;
+        width: 13em;
+        height: 13em;
+        background-color: yellow;
+        border-radius: 50%;
+        box-shadow: 0 0 3em white;
+      }
+      .earth,
+      .moon,
+      .mars,
+      .jupiter,
+      .saturn,
+      .ring,
+      .uranus,
+      .neptune {
+        position: absolute;
+        border-style: solid;
+        border-color: white;
+        border-radius: 50%;
+        border-width: 0.18em 0.18em 0.18em 0.18em;
+      }
+      .earth {
+        top: 5em;
+        left: 5em;
+        width: 30em;
+        height: 30em;
+        animation: orbit 36.5s linear infinite;
+      }
+      .moon {
+        top: 0.4em;
+        right: 0.5em;
+        width: 8em;
+        height: 8em;
+        animation: orbit 2.7s linear infinite;
+      }
+      .mars {
+        top: 0.1em;
+        left: 0.02em;
+        width: 40em;
+        height: 40em;
+        animation: orbit 43s linear infinite;
+      }
+      .jupiter {
+        top: -9em;
+        left: -8.6em;
+        width: 57em;
+        height: 57em;
+        animation: orbit 70s linear infinite;
+      }
+      .saturn{
+        top: -15.5em;
+        left: -15em;
+        width: 70em;
+        height: 70em;
+        animation: orbit 80s linear infinite;
+      }
+      .ring {
+        top: -4em;
+        left: 26.5em;
+        width: 8em;
+        height: 8em;
+        animation: orbit 80s linear infinite;
+        border-color: sandybrown;
+        border-width: 0.5em 0.5em 0.5em 0.5em;
+      }
+      .uranus {
+        top: -24.5em;
+        left: -24.3em;
+        width: 88em;
+        height: 88em;
+        animation: orbit 90s linear infinite;
+      }
+      .neptune {
+        top: -35.5em;
+        left: -35em;
+        width: 110em;
+        height: 110em;
+        animation: orbit 95s linear infinite;
+      }
+      .neptune::before {
+        top: 4.3em;
+        left: 28em;
+        width: 3.5em;
+        height: 3.5em;
+        background-color: blue;
+        box-shadow: 0 0 0.4em white;
+      }
+      .uranus::before {
+        top: -0.1em;
+        left: 28em;
+        width: 4em;
+        height: 4em;
+        background-color: aqua;
+      }
+      .saturn::before {
+        top: -2.5em;
+        left: 28em;
+        width: 6em;
+        height: 6em;
+        background-color: brown;
+      }
+      .jupiter::before {
+        top: -3.3em;
+        left: 28em;
+        width: 7.5em;
+        height: 7.5em;
+        background-color: green;
+      }
+      .mars::before {
+        top: 1em;
+        right: 2em;
+        left: 28em;
+        width: 3em;
+        height: 3em;
+        background-color: red;
+        box-shadow: 0 0 0.6em white;
+      }
+      .earth::before, 
+      .moon::before,
+      .mars::before,
+      .jupiter::before,
+      .saturn::before,
+      .uranus::before,
+      .neptune::before {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+      }
+      .earth::before {
+        top: 2.8em;
+        right: 2.8em;
+        left: 24em;
+        width: 3em;
+        height: 3em;
+        background-color: aqua;
+        box-shadow: 0 0 1em white;
+      }
+      .moon::before {
+        top: 0.8em;
+        right: 0,2em;
+        left: 6.5em;
+        width: 1.2em;
+        height: 1.2em;
+        background-color: silver;
+      }
+      @keyframes orbit {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <div class="container">
+    	<div class="sun"></div>
+
+      <div class="earth">
+        <div class="moon"></div>
+      </div>
+
+      <div class="mars"></div>
+
+      <div class="jupiter"></div>
+
+      <div class="saturn">
+        <div class="ring"></div> 
+      </div>
+
+      <div class="uranus"></div>
+
+      <div class="neptune"></div>
+    </div>
+  </body>
+</html>
